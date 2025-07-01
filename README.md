@@ -57,7 +57,7 @@
 
 | 步骤 | 操作 |说明 |
 | ---- | ---- | ---- |
-| ① 申请账号 | Lenovo EA 会给你发一封邮件 |根据邮件的步骤完成注册流程 |
+| ① 申请账号 | 你的公司相关组织会给你发一封邮件 |根据邮件的步骤完成注册流程 |
 | ② 安装插件 | 在 **扩展视图 (Ctrl+Shift+X)** 搜索 **GitHub Copilot** 和 **GitHub Copilot Chat**| 两个都需要安装| 
 | ③ 登录账号 | 在状态栏点击 Copilot 图标 → **Set up Copilot**，使用公司 GitHub 账号 OAuth 登录 | `<itcode>_lenovo` 例如： gaogh2_lenovo |
 
