@@ -1,11 +1,12 @@
 {
-  "name": "github-copilot-demo",
+  "name": "vscode-copilot-tutorial",
   "version": "1.0.0",
   "description": "A comprehensive demo project showcasing GitHub Copilot core features",
   "main": "index.js",
   "scripts": {
-    "start": "node src/basic-completion/app.js",
-    "dev": "nodemon src/basic-completion/app.js",
+    "start": "node index.js",
+    "api": "node src/06-api-development/server.js",
+    "dev": "nodemon src/06-api-development/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js",

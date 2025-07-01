@@ -5,7 +5,7 @@
 ## 项目结构
 
 ```
-github-copilot-demo/
+vscode-copilot-tutorial/
 ├── src/
 │   ├── 01-basic-completion/          # 基础代码补全演示
 │   ├── 02-comment-driven/            # 注释驱动开发
@@ -15,11 +15,20 @@ github-copilot-demo/
 │   ├── 06-api-development/           # REST API 开发
 │   └── 07-advanced-patterns/         # 高级模式和最佳实践
 ├── .github/
-│   ├── copilot-instructions.md      # 项目级指令
-│   ├── prompts/                      # 提示模板
-│   └── chatmodes/                    # 自定义 Chat 模式
+│   ├── copilot-instructions.md      # 项目级 Copilot 指令
+│   └── prompts/                      # 自定义提示模板
+│       ├── code-review.prompt.md    # 代码审查提示
+│       └── feature-planning.prompt.md # 功能规划提示
+├── docs/                             # 文档目录
+│   ├── QUICK_START.md               # 快速开始指南
+│   ├── DEMO_GUIDE.md                # 演示指南
+│   └── Copilot-tutorial.md          # Copilot 教程
 ├── tests/                            # 测试文件
-└── docs/                             # 文档
+├── package.json                      # 项目配置和依赖
+├── jest.config.js                    # Jest 测试配置
+├── .env.example                      # 环境变量示例
+├── .copilotignore                    # Copilot 忽略文件
+└── .gitignore                        # Git 忽略文件
 ```
 
 ## 快速开始
@@ -45,6 +54,12 @@ npm run dev
 
 # 运行测试
 npm test
+
+# 代码检查
+npm run lint
+
+# 自动修复代码风格
+npm run fix
 ```
 
 ## 演示功能列表
@@ -102,6 +117,29 @@ npm test
 6. 完整演示 `06-api-development` 的开发流程
 7. 最后展示 `07-advanced-patterns` 的高级功能
 
+### 项目文件说明
+- **配置文件**:
+  - `package.json`: 项目配置，包含所有依赖和脚本
+  - `jest.config.js`: Jest 测试框架配置
+  - `.env.example`: 环境变量配置示例
+  - `.copilotignore`: 配置 Copilot 忽略的文件和目录
+  - `.gitignore`: Git 版本控制忽略文件
+
+- **Copilot 配置**:
+  - `.github/copilot-instructions.md`: 项目级 Copilot 指令文件
+  - `.github/prompts/`: 自定义提示模板目录
+    - `code-review.prompt.md`: 代码审查提示模板
+    - `feature-planning.prompt.md`: 功能规划提示模板
+
+- **文档目录**:
+  - `docs/QUICK_START.md`: 快速开始指南
+  - `docs/DEMO_GUIDE.md`: 详细演示指南  
+  - `docs/Copilot-tutorial.md`: Copilot 使用教程
+
+- **代码和测试**:
+  - `src/`: 演示代码目录，包含7个不同功能的演示
+  - `tests/`: 测试文件目录
+
 ### Copilot 快捷键提醒
 - **Tab**: 接受建议
 - **Alt + ]**: 下一个建议
@@ -122,6 +160,7 @@ npm test
 2. 建议按顺序进行演示，每个目录都有独立的演示脚本
 3. 可以根据需要修改代码，观察 Copilot 的建议变化
 4. 鼓励尝试不同的注释和提示方式
+5. **新功能**: 项目已配置 Copilot 指令文件和自定义提示模板，可体验更精准的 AI 辅助
 
 ## 演示技巧
 
@@ -130,6 +169,8 @@ npm test
 3. **使用有意义的注释**: 展示注释驱动开发的强大
 4. **对比不同提示**: 展示不同输入对结果的影响
 5. **实时互动**: 让观众提出需求，现场演示
+6. **体验自定义提示**: 使用 `.github/prompts/` 中的提示模板
+7. **展示 Copilot 指令**: 演示项目级指令如何影响代码生成
 
 ---
 

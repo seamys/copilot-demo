@@ -375,6 +375,8 @@ Please generate a detailed implementation plan for ${input:feature:Feature name}
     └── backend.instructions.md         # Backend specific
 ```
 
+> 💡 **实际示例**: 本项目已配置了示例文件 `.github/copilot-instructions.md` 和 `.github/prompts/` 目录，可以直接体验这些功能。
+
 #### 4.3.3 配置同步
 
 启用设置同步以在多设备间共享用户级配置：

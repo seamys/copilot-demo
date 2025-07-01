@@ -1,56 +1,56 @@
-# 项目编码规范
+# Project Coding Standards
 
-## 命名约定
-- 使用 camelCase 命名变量和函数
-- 使用 PascalCase 命名类和构造函数
-- 使用 UPPER_SNAKE_CASE 命名常量
-- 文件名使用 kebab-case
+## Naming Conventions
+- Use camelCase for variables and functions
+- Use PascalCase for classes and constructors
+- Use UPPER_SNAKE_CASE for constants
+- Use kebab-case for file names
 
-## 代码风格
-- 使用 2 空格缩进
-- 单引号字符串
-- 行末不加分号（除非必要）
-- 最大行长度 100 字符
+## Code Style
+- Use 2 spaces for indentation
+- Use single quotes for strings
+- No semicolons at line endings (unless necessary)
+- Maximum line length of 100 characters
 
-## 函数规范
-- 函数必须有 JSDoc 注释
-- 参数和返回值要有类型说明
-- 复杂逻辑要有示例代码
-- 使用 async/await 而不是 Promise.then()
+## Function Standards
+- Functions must have JSDoc comments
+- Parameters and return values must have type descriptions
+- Complex logic must include example code
+- Use async/await instead of Promise.then()
 
-## 错误处理
-- 使用 try/catch 包装异步操作
-- 错误信息要有上下文信息
-- 记录错误日志便于调试
-- 为用户提供友好的错误提示
+## Error Handling
+- Wrap async operations with try/catch
+- Error messages must include context information
+- Log errors for debugging purposes
+- Provide user-friendly error messages
 
-## 注释规范
-- 代码要有清晰的注释说明业务逻辑
-- TODO 注释要包含负责人和时间
-- 复杂算法要有步骤说明
-- API 接口要有完整的文档注释
+## Comment Standards
+- Code must have clear comments explaining business logic
+- TODO comments must include assignee and timestamp
+- Complex algorithms must have step-by-step explanations
+- API interfaces must have complete documentation comments
 
-## 示例代码风格
+## Example Code Style
 ```javascript
 /**
- * 用户认证服务
- * @param {string} email - 用户邮箱
- * @param {string} password - 用户密码
+ * User authentication service
+ * @param {string} email - User email address
+ * @param {string} password - User password
  * @returns {Promise<{success: boolean, token?: string, error?: string}>}
  * @example
  * const result = await authenticateUser('user@example.com', 'password123')
  * if (result.success) {
- *   console.log('登录成功:', result.token)
+ *   console.log('Login successful:', result.token)
  * }
  */
 async function authenticateUser(email, password) {
   try {
-    // 验证用户输入
+    // Validate user input
     if (!email || !password) {
-      return { success: false, error: '邮箱和密码不能为空' }
+      return { success: false, error: 'Email and password are required' }
     }
     
-    // 查找用户并验证密码
+    // Find user and verify password
     const user = await User.findOne({ email })
     const isValid = await bcrypt.compare(password, user.password)
     
@@ -59,10 +59,10 @@ async function authenticateUser(email, password) {
       return { success: true, token }
     }
     
-    return { success: false, error: '邮箱或密码错误' }
+    return { success: false, error: 'Invalid email or password' }
   } catch (error) {
-    console.error('认证失败:', error.message)
-    return { success: false, error: '服务器内部错误' }
+    console.error('Authentication failed:', error.message)
+    return { success: false, error: 'Internal server error' }
   }
 }
 ```

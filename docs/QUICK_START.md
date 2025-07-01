@@ -42,7 +42,24 @@ npm test
 6. **06-api-development** - API 开发
 7. **07-advanced-patterns** - 高级功能
 
-## 4. 关键快捷键
+## 4. Copilot 配置体验
+
+### 自定义指令
+项目已配置了 Copilot 指令文件，可以体验更精准的 AI 辅助：
+- 查看 `.github/copilot-instructions.md` 了解项目级配置
+- 观察 Copilot 如何根据项目指令调整建议
+
+### 自定义提示模板  
+使用预配置的提示模板：
+```bash
+# 使用代码审查提示
+# 在 Chat 中输入: @workspace Use .github/prompts/code-review.prompt.md
+
+# 使用功能规划提示  
+# 在 Chat 中输入: @workspace Use .github/prompts/feature-planning.prompt.md
+```
+
+## 5. 关键快捷键
 
 - **Tab**: 接受 Copilot 建议
 - **Alt + ]**: 下一个建议  
