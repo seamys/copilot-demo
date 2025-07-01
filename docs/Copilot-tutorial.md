@@ -57,9 +57,9 @@
 
 | 步骤 | 操作 |说明 |
 | ---- | ---- | ---- |
-| ① 申请账号 | Lenovo EA 会给你发一封邮件 |根据邮件的步骤完成注册流程 |
+| ① 申请账号 | 一般您的公司会给你发一封邀请注册的邮件 |根据邮件的步骤完成注册流程 |
 | ② 安装插件 | 在 **扩展视图 (Ctrl+Shift+X)** 搜索 **GitHub Copilot** 和 **GitHub Copilot Chat**| 两个都需要安装| 
-| ③ 登录账号 | 在状态栏点击 Copilot 图标 → **Set up Copilot**，使用公司 GitHub 账号 OAuth 登录 | `<itcode>_lenovo` 例如： gaogh2_lenovo |
+| ③ 登录账号 | 在状态栏点击 Copilot 图标 → **Set up Copilot**，使用公司 GitHub 账号 OAuth 登录 | `<itcode>_<companyname>` 例如： gaogh2_lenovo |
 
 ---
 
@@ -83,10 +83,10 @@
 | ---- | ---- | ---- |
 | Chat View | CTRL+ ALT + I | 长对话、切换 Ask / Edit / Agent Mode |
 | [Inline Chat](https://code.visualstudio.com/docs/copilot/chat/inline-chat) | CTRL + I | 选中代码后局部重构、解释 |
-| Quick Chat | CTRL + SHIFT + ALT + I | 快速单问单答 |
+| Quick Chat | Ctrl + Shift + Alt + L | 快速单问单答 |
 
 * **[Ask Mode](https://code.visualstudio.com/docs/copilot/chat/chat-ask-mode)**：问答 / 文档 / 学习  
-* **[Edit Mode](https://code.visualstudio.com/docs/copilot/chat/copilot-edits)**：多文件批量修改（自动创建 PR）  
+* **[Edit Mode](https://code.visualstudio.com/docs/copilot/chat/copilot-edits)**：多文件批量修改
 * **[Agent Mode](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode)**：端到端任务（运行测试 → 修复 → 生成代码）
 
 常用 Slash Commands：
@@ -134,7 +134,6 @@ The plan consists of a Markdown document that describes the implementation plan,
 ### 2.4 终端与命令助手
 
 * 在集成终端按 **CTRL + I** 打开 Inline Chat，直接询问 shell 命令  
-* 失败命令旁出现 ✨ **Fix with Copilot**，可自动解析错误并给出重试命令  
 
 ### 2.5 Smart Actions (右键 → Copilot)
 
@@ -164,6 +163,7 @@ The plan consists of a Markdown document that describes the implementation plan,
 | `#codebase` | 代码库搜索 | `Explain auth flow in #codebase` |
 | `#selection` | 活动窗口选区 | `Refactor the #selection to use hooks` |
 | `#terminalLastCommand` | 最近一次终端命令 | `Why did #terminalLastCommand fail?` |
+
 
 支持拖拽文件 / 文件夹或用 **Add Context** 按钮添加。  
 
